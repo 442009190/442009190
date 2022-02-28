@@ -15,9 +15,9 @@ public class Queue{
 
     public Queue(Node  $element) {
         //Q1: assign $element to the head
-        head = h1; 
+        head = element; 
         //Q2: assign $element to the tail
-        tail = t1;
+        tail = element;
     }
 
     /**
@@ -29,10 +29,10 @@ public class Queue{
 
     public Queue add(Node $element) {
         //Q3: assign $element to the attribute next in tail object
-         
+         tatil.next = element;
 
         //Q4: assign $element to the tail object
-         tail = t3;
+         tail = element;
 
         return this;
     }
@@ -41,13 +41,13 @@ public class Queue{
         //Q5: if the head is not null ( which means the queue is not empty )
         if (tail != null) {
             //Q6: Create an object of Node named $iteration and assign this.head to it
-              this.head=$iteration; 
+               Node $iteration = this.head; 
             //Q7: While the next attribute in $iteration is not null
-            while ($iteration != null) {
+            while ($iteration.next != null) {
                 //Q8: print with line the attribute value in $iteration
                    System.out.println($iteration.value);
                 //Q9: assign the attribute next in $iteration to $iteration
-
+                     $iteration = $iteration.next;
             }
             //print at least the first node if the queue size is 1
             System.out.println($iteration.value);
@@ -59,9 +59,9 @@ public class Queue{
 
     public void pop() {
         //Q8: Create object of Node named $head and assign this.head to it
-           this.head=$head;
+            Node $head = this.head;
         //Q9: Assign to this.head the attribute next in $head (so you can move head forward)
-
+              $head.next = this.head
         //print the head value
         System.out.format("%n#######################%n");
         System.out.format("[\tQueue was popped (%s)\t]", $head.value);
@@ -74,15 +74,15 @@ public class Queue{
         //Q11:if the head is not null
         if (head != null) {
             //Q12: change the $size to be 1
-              ++$size;
+               $size = 1;
             //Q13: Create object of Node named $iteration and assign this.head to it
-                this.head=$iteration;
+                 Node $iteration= this.head;
             //Q14: While the next attribute in $iteration is not null
-            while ($iteration != null) {
+            while ($iteration.next != null) {
                 //Q15: increase the $size by 1
                      ++$size;
                 //Q16: assign the attribute next in $iteration to $iteration
-                        
+                      $iteration = $iteration.next;  
             }
         }
         //Q17: return $size
