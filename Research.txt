@@ -1,0 +1,13 @@
+1.How to create a Window in Java ?
+  - To create a window, you must import (import javax.swing;) into the class, and create an object called (JFrame) which is the window or frame.
+2.What is the most useful properties and functions in Java Window?
+  - An important property of creating a window is:
+  ~ setTitle();  To create a title frame.
+  ~ setVisible();  It is used to make the frame visible and takes two types (true, false).
+  ~ setSize();  It is specific to frame dimensions and uses two types (Width,height).
+  ~ setDefultCloseOperation();  To control exit settings.
+3.What is Java threads?
+  - Threads allows a program to operate more efficiently by doing multiple things at the same time.
+4.What is Java Main thread?
+  - The main thread is created automatically when our program is started. To control it we must obtain a reference to it.
+  This can be done by calling the method (currentThread()) which is present in Thread class.
